@@ -1,0 +1,12 @@
+{
+  "cg": 320,
+  "backgrounds": 1,
+  "images": 321,
+  "storiesWithCG": 23,
+  "bodyFigures": 35,
+  "scenes": 134,
+  "assetSnapshot": "aa5cb25df844ee2b0680428b13cb65d5d4b515a5",
+  "encoding": "保留原始分辨率；正文配图采用 WebP quality 95，部分图册大图采用 quality 92；另提供原始 PNG 链接；缩略图独立加载",
+  "nativeResolutionPreserved": true,
+  "note": "图像据原作剧情脚本中的图像调用核对；游戏美术由社区镜像提供。图册按正文引用章节收录，回忆与当下时点以事件正文说明为准。"
+}

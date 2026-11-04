@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-04",
+  "operatorCount": 438,
+  "supportCount": 29,
+  "npcCount": 65,
+  "storyCount": 438,
+  "repository": "https://github.com/Kengxxiao/ArknightsGameData",
+  "commit": "63c7cec73c3858d0ae913f85cc89af3cef4d744f",
+  "sourceHashes": {
+    "character_table": "d7cff9b442fe0dc8bd20f4158c4bc18bacdc1f5b9447c28ce60381a5b6e2e5ed",
+    "handbook_info_table": "223abbc2397052226aea0e05ac25a3ca3de8a4fd39388a54bd3745818922b07b",
+    "char_meta_table": "305553a377cfff8d4da83ed943d9ed8d484ff65d8dea57e0bdc679e26f2fe1ad"
+  },
+  "scope": "名录依据本次公开中文游戏资料快照。异格分条，阿米娅升变关联同一条目；特殊支援另列。收录全部常规可获取标记的干员，包含当前无法再次获取的活动与联动角色。"
+}

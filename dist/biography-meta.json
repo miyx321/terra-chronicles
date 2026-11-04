@@ -1,0 +1,15 @@
+{
+  "style": "纪实人物纪事",
+  "operatorPeople": 400,
+  "npcPeople": 65,
+  "operatorEntries": 438,
+  "primaryScenesIndexed": 1615,
+  "memoryScenesRead": 399,
+  "paragraphs": 1766,
+  "relationships": 1429,
+  "characters": 325543,
+  "minimumCharacters": 293,
+  "maximumCharacters": 1898,
+  "recordLinks": 515,
+  "coverage": "同一人物的常规与异格经历合并，明确区分时间未定、回忆、程序与分支；仅陈述所列来源支持的经历。"
+}

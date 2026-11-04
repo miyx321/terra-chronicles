@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="theme-color" content="#173a35">
+ <meta name="description" content="泰拉行纪：以地区与人物串起明日方舟的故事。22个地区与组织、23篇地区故事、完整人物纪事与主要剧情人物索引、互动地区地图，附阅读路线与资料来源。">
+ <title>泰拉行纪 · 大地与众生</title>
+ <link rel="icon" type="image/svg+xml" href="favicon.svg">
+ <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="experience.css">
+ <link rel="stylesheet" href="story-images.css">
+ <link rel="stylesheet" href="profile.css">
+ <link rel="stylesheet" href="origins.css">
+ <script defer src="content.js"></script>
+ <script defer src="documentary.js"></script>
+ <script defer src="regions.js"></script>
+ <script defer src="regional-origins.js"></script>
+ <script defer src="chapter-index.js"></script>
+ <script defer src="npcs.js"></script>
+ <script defer src="operators.js"></script>
+ <script defer src="operator-profiles.js"></script>
+ <script defer src="biographies.js"></script>
+ <script defer src="illustrations.js"></script>
+ <script defer src="story-art.js"></script>
+ <script defer src="art-ui.js"></script>
+ <script defer src="story-image-ui.js"></script>
+ <script defer src="origin-ui.js"></script>
+ <script defer src="region-ui.js"></script>
+ <script defer src="profile-ui.js"></script>
+ <script defer src="biography-ui.js"></script>
+ <script defer src="roster-ui.js"></script>
+ <script defer src="map-reference.js"></script>
+ <script defer src="map-ui.js"></script>
+ <script defer src="app.js"></script>
+</head>
+<body>
+ <a href="#main" class="skip">跳到正文</a>
+ <header class="site-header">
+  <a class="brand" href="#/home" aria-label="泰拉行纪首页"><span class="brand-symbol" aria-hidden="true">行</span><span>泰拉行纪<small>TERRA CHRONICLES</small></span></a>
+  <nav aria-label="主导航"><a href="#/home" data-nav="home">展卷</a><a href="#/map" data-nav="map">行纪地图</a><a href="#/atlas" data-nav="atlas">大地诸境</a><a href="#/people" data-nav="people">人物纪事</a><a href="#/routes" data-nav="routes">阅读路线</a><a href="#/sources" data-nav="sources">资料室</a></nav>
+  <div class="header-actions"><button class="icon-btn" data-action="search" aria-label="搜索故事与人物" title="搜索 / Ctrl K"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></button><a class="icon-btn shelf-link" href="#/shelf" aria-label="我的书架" title="我的书架"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg></a><button class="icon-btn" data-action="theme" aria-label="切换深浅阅读主题" title="切换主题"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4v16"/></svg></button></div>
+ </header>
+ <main id="main" tabindex="-1"></main>
+ <footer class="site-footer"><a href="#/home">泰拉行纪 <span>大地与众生</span></a><p>非官方叙事梳理与主题解读 · 《明日方舟》及相关内容权利归鹰角网络等原权利人所有</p><a href="#/sources">编写说明与资料来源 ↗</a><small>背景：<a href="https://ak.hypergryph.com/special/4th-anniversary/index.html" target="_blank" rel="noopener noreferrer">官方四周年纪念图 ↗</a><br>非官方故事集 · 整理于 2026.11.04</small></footer>
+ <dialog id="search-dialog" aria-labelledby="search-title"><div class="dialog-top"><h2 id="search-title">在大地上寻找</h2><button class="text-btn" data-action="close-search" aria-label="关闭搜索">关闭 ×</button></div><label class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="global-search" type="search" autocomplete="off" placeholder="地区、人物、活动或故事中的词语…" aria-label="搜索全文"></label><p class="muted search-hint">检索本卷的故事、人物与剧情篇名。按 Esc 关闭。</p><div id="search-results" class="search-results" aria-live="polite"></div></dialog>
+ <dialog id="person-dialog" aria-labelledby="person-title"></dialog>
+ <div id="toast" role="status" aria-live="polite"></div>
+ <noscript><div class="noscript">请启用 JavaScript，以浏览故事目录、人物索引与阅读器。</div></noscript>
+</body>
+</html>

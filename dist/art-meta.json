@@ -1,0 +1,19 @@
+{
+  "sourceTitle": "ArknightsAssets2 · 中文游戏美术资源公共镜像",
+  "sourceUrl": "https://github.com/ArknightsAssets/ArknightsAssets2/tree/aa5cb25df844ee2b0680428b13cb65d5d4b515a5",
+  "snapshot": "aa5cb25df844ee2b0680428b13cb65d5d4b515a5",
+  "operatorRecordsWithArt": 438,
+  "npcRecordsWithArt": 63,
+  "supportRecordsWithArt": 29,
+  "illustrations": 932,
+  "note": "官方游戏角色美术，资源由社区镜像提供；仅为阅读配图，权利归原权利人。",
+  "background": {
+    "title": "明日方舟官方四周年纪念图",
+    "page": "https://ak.hypergryph.com/special/4th-anniversary/index.html",
+    "original": "https://web.hycdn.cn/arknights/special/4th-anniversary/assets/img/main-kv.6ddc9b.jpg"
+  },
+  "npcMissing": [
+    "弗里斯顿",
+    "老商人"
+  ]
+}
