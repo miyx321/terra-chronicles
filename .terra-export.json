@@ -1,0 +1,7 @@
+{
+  "project": "terra-chronicles",
+  "targetRepository": "miyx321/terra-chronicles",
+  "sourceCommit": "91665a73e7d68c8a39401b28e24bd8bda0a0479d",
+  "exportedDate": "2026-11-04",
+  "kind": "standalone-static-site"
+}
