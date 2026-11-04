@@ -2,12 +2,13 @@
   "stories": 23,
   "regions": 22,
   "periods": 177,
-  "characters": 66836,
+  "characters": 67267,
   "primaryScenesCited": 192,
   "archiveLinksCited": 13,
   "date": "2026-11-04",
   "style": "纪实叙述；按可考先后分期；事件与人物双向关联",
   "expandedPeriods": 29,
   "bodyFigures": 35,
-  "charactersAdded": 16580
+  "charactersAdded": 16580,
+  "journeyModernPatches": 2
 }

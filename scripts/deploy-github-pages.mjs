@@ -41,11 +41,12 @@ try{
  // so its first run sees the complete site rather than a partial upload.
  const tracked=new Set(command(['ls-files','-z','dist/assets']).stdout.split('\0').filter(Boolean));
  const media=[];function collect(dir){for(const e of fs.readdirSync(path.join(root,dir),{withFileTypes:true})){const p=dir+'/'+e.name;if(e.isDirectory())collect(p);else if(!tracked.has(p))media.push(p);}}collect('dist/assets');
- if(media.length){const appFiles=fs.readdirSync(path.join(root,'dist'),{withFileTypes:true}).filter(e=>e.isFile()).map(e=>'dist/'+e.name);command(['add','--',...appFiles]);if(command(['diff','--cached','--quiet'],{allowFailure:true}).status===1){commit('Add static application and story data');push();}
+ const workflowTracked=command(['ls-files','--error-unmatch','.github/workflows/pages.yml'],{allowFailure:true}).status===0;
+ if(media.length&&!workflowTracked){const appFiles=fs.readdirSync(path.join(root,'dist'),{withFileTypes:true}).filter(e=>e.isFile()).map(e=>'dist/'+e.name);command(['add','--',...appFiles]);if(command(['diff','--cached','--quiet'],{allowFailure:true}).status===1){commit('Add static application and story data');push();}
   const batches=[];let batch=[],bytes=0;for(const file of media){const n=fs.statSync(path.join(root,file)).size;if(bytes+n>40*1024*1024&&batch.length){batches.push(batch);batch=[];bytes=0;}batch.push(file);bytes+=n;}if(batch.length)batches.push(batch);
   fs.mkdirSync(path.join(root,'.runtime'),{recursive:true});for(let i=0;i<batches.length;i++){const spec=path.join(root,'.runtime','asset-paths.bin');fs.writeFileSync(spec,batches[i].join('\0')+'\0');command(['add','--pathspec-from-file='+spec,'--pathspec-file-nul']);commit('Add website media batch '+(i+1)+' of '+batches.length);console.log('Uploading media batch '+(i+1)+' / '+batches.length);push();}
  }
- command(['add','--all']);if(command(['diff','--cached','--quiet'],{allowFailure:true}).status===1)commit('Enable automatic GitHub Pages publication');
+ command(['add','--all']);if(command(['diff','--cached','--quiet'],{allowFailure:true}).status===1)commit('Update Terra Chronicles content and Pages configuration');
  const sha=command(['rev-parse','HEAD']).stdout.trim();
  console.log('Uploading website assets to '+target+' ...');push();console.log('Source uploaded: '+sha);
  saveState({repository:target,commit:sha,status:'source-uploaded'});

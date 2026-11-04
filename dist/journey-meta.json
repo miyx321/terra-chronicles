@@ -1,0 +1,301 @@
+{
+  "title": "《大地巡旅》文本校读与原创转述",
+  "date": "2026-11-04",
+  "regions": 22,
+  "personNotes": 20,
+  "canonicalPeople": 20,
+  "raceEntries": 32,
+  "raceSections": 64,
+  "regionalCharactersAdded": 16077,
+  "modernCharactersAdded": 431,
+  "personNoteCharacters": 5294,
+  "raceCharacters": 10432,
+  "source": {
+    "kind": "用户提供的全文TXT转录",
+    "filename": "TERRA+A+JOURNEY.txt",
+    "bytes": 1214927,
+    "sha256": "00515b3aa0bd38983c4f785210b35865afa1441409765c81e31bb1c40c997f1b",
+    "lines": 6512,
+    "limits": "存在OCR错字、跨栏串行及批注混排。章节与印刷页区间依据目录，非原版影印逐页校勘。原始TXT仅作本地研究材料。"
+  },
+  "chapterCount": 25,
+  "chapters": [
+    {
+      "id": "journey-kazimierz",
+      "region": "kazimierz",
+      "title": "卡西米尔",
+      "chapter": "第五章·5.9",
+      "pages": "218–227",
+      "lineStart": 3021,
+      "lineEnd": 3192,
+      "scope": "用于补充地区起源、制度沿革及成书时点的社会记录；以正文实际列出的阶段为准。",
+      "notes": "用户提供的TXT全文转录，混有OCR、图注与批注；章节及页码范围依文本目录整理，不代表已逐页对照原版影印本。"
+    },
+    {
+      "id": "journey-victoria",
+      "region": "victoria",
+      "title": "维多利亚与塔拉",
+      "chapter": "第五章·5.1、5.1.1",
+      "pages": "110–125",
+      "lineStart": 1313,
+      "lineEnd": 1485,
+      "scope": "用于补充地区起源、制度沿革及成书时点的社会记录；以正文实际列出的阶段为准。",
+      "notes": "用户提供的TXT全文转录，混有OCR、图注与批注；章节及页码范围依文本目录整理，不代表已逐页对照原版影印本。"
+    },
+    {
+      "id": "journey-columbia",
+      "region": "columbia",
+      "title": "哥伦比亚",
+      "chapter": "第五章·5.10",
+      "pages": "228–248",
+      "lineStart": 3193,
+      "lineEnd": 3582,
+      "scope": "用于补充地区起源、制度沿革及成书时点的社会记录；以正文实际列出的阶段为准。",
+      "notes": "用户提供的TXT全文转录，混有OCR、图注与批注；章节及页码范围依文本目录整理，不代表已逐页对照原版影印本。"
+    },
+    {
+      "id": "journey-leithanien",
+      "region": "leithanien",
+      "title": "莱塔尼亚",
+      "chapter": "第五章·5.2",
+      "pages": "126–137",
+      "lineStart": 1490,
+      "lineEnd": 1712,
+      "scope": "用于补充地区起源、制度沿革及成书时点的社会记录；以正文实际列出的阶段为准。",
+      "notes": "用户提供的TXT全文转录，混有OCR、图注与批注；章节及页码范围依文本目录整理，不代表已逐页对照原版影印本。"
+    },
+    {
+      "id": "journey-siracusa",
+      "region": "siracusa",
+      "title": "叙拉古",
+      "chapter": "第五章·5.12",
+      "pages": "261–271",
+      "lineStart": 3736,
+      "lineEnd": 3930,
+      "scope": "用于补充地区起源、制度沿革及成书时点的社会记录；以正文实际列出的阶段为准。",
+      "notes": "用户提供的TXT全文转录，混有OCR、图注与批注；章节及页码范围依文本目录整理，不代表已逐页对照原版影印本。"
+    },
+    {
+      "id": "journey-bolivar",
+      "region": "bolivar",
+      "title": "玻利瓦尔",
+      "chapter": "第五章·5.11",
+      "pages": "249–260",
+      "lineStart": 3583,
+      "lineEnd": 3735,
+      "scope": "用于补充地区起源、制度沿革及成书时点的社会记录；以正文实际列出的阶段为准。",
+      "notes": "用户提供的TXT全文转录，混有OCR、图注与批注；章节及页码范围依文本目录整理，不代表已逐页对照原版影印本。"
+    },
+    {
+      "id": "journey-kjerag",
+      "region": "kjerag",
+      "title": "谢拉格",
+      "chapter": "第五章·5.8",
+      "pages": "208–217",
+      "lineStart": 2860,
+      "lineEnd": 3020,
+      "scope": "用于补充地区起源、制度沿革及成书时点的社会记录；以正文实际列出的阶段为准。",
+      "notes": "用户提供的TXT全文转录，混有OCR、图注与批注；章节及页码范围依文本目录整理，不代表已逐页对照原版影印本。"
+    },
+    {
+      "id": "journey-siesta",
+      "region": "siesta",
+      "title": "汐斯塔",
+      "chapter": "第五章·5.10.2",
+      "pages": "244–248",
+      "lineStart": 3507,
+      "lineEnd": 3582,
+      "scope": "用于补充地区起源、制度沿革及成书时点的社会记录；以正文实际列出的阶段为准。",
+      "notes": "用户提供的TXT全文转录，混有OCR、图注与批注；章节及页码范围依文本目录整理，不代表已逐页对照原版影印本。"
+    },
+    {
+      "id": "journey-lungmen",
+      "region": "lungmen",
+      "title": "龙门：炎国城市印象",
+      "chapter": "第五章·5.17.1",
+      "pages": "315–324（所属大炎章）",
+      "lineStart": 4672,
+      "lineEnd": 4735,
+      "scope": "用于补充地区起源、制度沿革及成书时点的社会记录；以正文实际列出的阶段为准。",
+      "notes": "用户提供的TXT全文转录，混有OCR、图注与批注；章节及页码范围依文本目录整理，不代表已逐页对照原版影印本。"
+    },
+    {
+      "id": "journey-yan",
+      "region": "yan",
+      "title": "大炎纵览",
+      "chapter": "第五章·5.17",
+      "pages": "315–324",
+      "lineStart": 4572,
+      "lineEnd": 4735,
+      "scope": "用于补充地区起源、制度沿革及成书时点的社会记录；以正文实际列出的阶段为准。",
+      "notes": "用户提供的TXT全文转录，混有OCR、图注与批注；章节及页码范围依文本目录整理，不代表已逐页对照原版影印本。"
+    },
+    {
+      "id": "journey-higashi",
+      "region": "higashi",
+      "title": "极东来信",
+      "chapter": "第五章·5.18",
+      "pages": "325–332",
+      "lineStart": 4737,
+      "lineEnd": 4845,
+      "scope": "用于补充地区起源、制度沿革及成书时点的社会记录；以正文实际列出的阶段为准。",
+      "notes": "用户提供的TXT全文转录，混有OCR、图注与批注；章节及页码范围依文本目录整理，不代表已逐页对照原版影印本。"
+    },
+    {
+      "id": "journey-karlan",
+      "region": "kjerag",
+      "title": "喀兰贸易",
+      "chapter": "第六章·6.3",
+      "pages": "368–371",
+      "lineStart": 5382,
+      "lineEnd": 5429,
+      "scope": "公司成立、改组、董事会与蔓珠院关系，以及银灰、初雪、灵知的相互联系。",
+      "notes": "其中企业沿革及改组表述含喀兰贸易对外宣传口径；不直接替代游戏呈现的冲突过程。"
+    },
+    {
+      "id": "journey-lee",
+      "region": "lungmen",
+      "title": "鲤氏侦探事务所",
+      "chapter": "第六章·6.8",
+      "pages": "389–392",
+      "lineStart": 5701,
+      "lineEnd": 5762,
+      "scope": "事务所的形成、四名成员的分工与相互照护，以及作者明确区分的市井传闻。",
+      "notes": "TXT多处将“吽”误识为“叶”；按游戏现有角色身份核对，不沿用OCR误字。"
+    },
+    {
+      "id": "journey-rhodes",
+      "region": "rhodes",
+      "title": "第六章补收《罗德岛》",
+      "chapter": "第六章补收《罗德岛》",
+      "pages": "印刷页未核",
+      "lineStart": 5771,
+      "lineEnd": 6025,
+      "scope": "组织形成、舰船发掘改造、部门与领导关系",
+      "notes": "按用户提供的文字转录校读；作者叙述、插入档案与批注分开理解。"
+    },
+    {
+      "id": "journey-ursus",
+      "region": "ursus",
+      "title": "乌萨斯",
+      "chapter": "第五章·乌萨斯",
+      "pages": "138—155",
+      "lineStart": 1713,
+      "lineEnd": 1970,
+      "scope": "骏鹰王国、31年建国、扩张及1074—1076年大叛乱",
+      "notes": "按用户提供的文字转录校读；作者叙述、插入档案与批注分开理解。"
+    },
+    {
+      "id": "journey-kazdel",
+      "region": "kazdel",
+      "title": "卡兹戴尔",
+      "chapter": "第五章·卡兹戴尔",
+      "pages": "333—346",
+      "lineStart": 4846,
+      "lineEnd": 5048,
+      "scope": "流动学校讲师的萨卡兹历史课、古代魔王及898年战争",
+      "notes": "按用户提供的文字转录校读；作者叙述、插入档案与批注分开理解。"
+    },
+    {
+      "id": "journey-rim",
+      "region": "rim",
+      "title": "雷姆必拓",
+      "chapter": "第五章·雷姆必拓",
+      "pages": "306—314",
+      "lineStart": 4454,
+      "lineEnd": 4570,
+      "scope": "卡特斯屯堡、两次大移民、矿业联合体形成",
+      "notes": "按用户提供的文字转录校读；作者叙述、插入档案与批注分开理解。"
+    },
+    {
+      "id": "journey-laterano",
+      "region": "laterano",
+      "title": "拉特兰",
+      "chapter": "第五章·拉特兰",
+      "pages": "166—181",
+      "lineStart": 2108,
+      "lineEnd": 2420,
+      "scope": "律法、教皇厅七厅、经济基础与中立外交",
+      "notes": "按用户提供的文字转录校读；作者叙述、插入档案与批注分开理解。"
+    },
+    {
+      "id": "journey-iberia",
+      "region": "iberia",
+      "title": "伊比利亚",
+      "chapter": "第五章·伊比利亚",
+      "pages": "182—197",
+      "lineStart": 2423,
+      "lineEnd": 2670,
+      "scope": "早期扩张、913年岛民到来、黄金时代与大静谧",
+      "notes": "按用户提供的文字转录校读；作者叙述、插入档案与批注分开理解。"
+    },
+    {
+      "id": "journey-aegir",
+      "region": "aegir",
+      "title": "阿戈尔",
+      "chapter": "第五章·阿戈尔",
+      "pages": "198—207",
+      "lineStart": 2671,
+      "lineEnd": 2857,
+      "scope": "转引笔记中的阿戈尔社会、人体改造争论与战时变化",
+      "notes": "按用户提供的文字转录校读；作者叙述、插入档案与批注分开理解。"
+    },
+    {
+      "id": "journey-sargon",
+      "region": "sargon",
+      "title": "萨尔贡",
+      "chapter": "第五章·萨尔贡",
+      "pages": "272—283",
+      "lineStart": 3930,
+      "lineEnd": 4117,
+      "scope": "社群联合、阿斯兰王权、路加萨尔古斯和梦魔南征",
+      "notes": "按用户提供的文字转录校读；作者叙述、插入档案与批注分开理解。"
+    },
+    {
+      "id": "journey-sami",
+      "region": "sami",
+      "title": "萨米",
+      "chapter": "第五章·萨米",
+      "pages": "293—305",
+      "lineStart": 4236,
+      "lineEnd": 4449,
+      "scope": "本土传承、838—851年探察、乌萨斯扩张与近代科考",
+      "notes": "按用户提供的文字转录校读；作者叙述、插入档案与批注分开理解。"
+    },
+    {
+      "id": "journey-durin",
+      "region": "durin",
+      "title": "杜林",
+      "chapter": "第四章·杜林",
+      "pages": "79—106（第四章范围；杜林细分页未核）",
+      "lineStart": 1119,
+      "lineEnd": 1129,
+      "scope": "地下城邦、外部认知和地表来往；与游戏际崖城材料对照",
+      "notes": "按用户提供的文字转录校读；作者叙述、插入档案与批注分开理解。"
+    },
+    {
+      "id": "journey-minos",
+      "region": "minos",
+      "title": "米诺斯",
+      "chapter": "第五章·米诺斯",
+      "pages": "284—292",
+      "lineStart": 4119,
+      "lineEnd": 4235,
+      "scope": "城邦传统、917年入侵、占领改造与1039—1042年复兴",
+      "notes": "按用户提供的文字转录校读；作者叙述、插入档案与批注分开理解。"
+    },
+    {
+      "id": "journey-races",
+      "title": "泰拉种族",
+      "chapter": "第四章",
+      "pages": "079–106",
+      "lineStart": 880,
+      "lineEnd": 1295,
+      "scope": "32个具名种族主条目的来源、分布、社会文化及相关批注；个人人物关联以游戏基础档案的种族字段核对。",
+      "notes": [
+        "先民、神民、兽亲与王庭分别说明，不以形貌代替公开身份。",
+        "未见明确记载的寿命、迁徙年份及普遍技艺不作推填。"
+      ]
+    }
+  ]
+}

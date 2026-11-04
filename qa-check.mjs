@@ -28,14 +28,14 @@ pass('all '+w.ROSTER_RENDER.all.length+' individual character and support pages 
 const bios=w.PERSON_BIOGRAPHIES;assert.equal(bios.meta.operatorPeople,400);assert.equal(bios.meta.npcPeople,65);
 for(const p of [...w.OPERATORS,...w.NPC_INDEX]){
  const b=w.BIOGRAPHY_UI.get(p.id);assert.ok(b,'Missing biography '+p.name);assert.ok(b.periods.length>=2);assert.ok(b.lead&&b.chronologyNote&&b.sources.length);
- go('/character/'+p.id);assert.equal(doc.querySelectorAll('.life-period').length,b.periods.length);assert.ok(doc.querySelector('#life-relations'));assert.ok(doc.querySelector('#life-evidence a'));assert.equal(doc.querySelectorAll('.biography-toc [data-anchor]').length,b.periods.length+2+(w.PROFILE_UI.get(p.id)?1:0));
+ go('/character/'+p.id);assert.equal(doc.querySelectorAll('.life-period').length,b.periods.length);assert.ok(doc.querySelector('#life-relations'));assert.ok(doc.querySelector('#life-evidence a'));assert.equal(doc.querySelectorAll('.biography-toc [data-anchor]').length,b.periods.length+2+(w.PROFILE_UI.get(p.id)?1:0)+(w.JOURNEY_UI.get(p).length?1:0));
  for(const a of doc.querySelectorAll('.biography-toc [data-anchor],.biography-mobile-toc [data-anchor]'))assert.ok(doc.getElementById(a.dataset.anchor),'Broken contents '+p.name);
  for(const f of p.forms||[])if(!f.patch&&w.BIOGRAPHY_UI.get(f.id))assert.equal(w.BIOGRAPHY_UI.get(f.id).personId,b.personId,'Alternate identity '+p.name);
 }
 pass('400 canonical operator biographies and 65 NPC biographies have stages, relations, sources and working contents');
 go('/character/char_002_amiya');assert.ok(doc.querySelectorAll('.life-period').length>=8);assert.match(doc.querySelector('.life-timeline').textContent,/切尔诺伯格/);assert.match(doc.querySelector('.life-timeline').textContent,/相变临界/);assert.match(doc.querySelector('#life-0 .biography-evidence a').href,/act33side.*st03/);click('[data-action="toggle-full"]');assert.equal(doc.querySelectorAll('.life-period,.biography-toc,.biography-mobile-toc').length,0);assert.ok(!doc.querySelector('.record-layout.with-biography'));click('[data-roster-enable]');assert.ok(doc.querySelector('.life-period'));pass('long chronology, exact cited scene links and spoiler mode');
 go('/people');click('[data-roster-kind="operator"]');input('#filter-query','纳斯尔纱');assert.match(doc.querySelector('#people-results').textContent,/死芒/);pass('character search includes events inside expanded biographies');
-go('/sources');assert.match(doc.querySelector('main').textContent,/未获得设定集全文/);assert.match(doc.querySelector('main').textContent,/438/);assert.ok(doc.querySelector('a[href="roster-meta.json"]'));pass('source transparency and snapshot provenance');
+go('/sources');assert.match(doc.querySelector('main').textContent,/已取得用户提供的全文 TXT 转录/);assert.match(doc.querySelector('main').textContent,/438/);assert.ok(doc.querySelector('a[href="roster-meta.json"]'));pass('source transparency and snapshot provenance');
 go('/routes');assert.equal(doc.querySelectorAll('.route-card').length,5);for(const a of doc.querySelectorAll('a[href^="#/story/"]'))assert.ok(w.TERRA.stories.some(s=>a.hash.endsWith(s.id)));pass('reading routes resolve');
 assert.equal(w.REGIONAL_CHRONICLES.meta.stories,23);assert.equal(w.REGIONAL_CHRONICLES.meta.regions,22);assert.ok(w.REGIONAL_CHRONICLES.meta.periods>=170);assert.ok(w.REGIONAL_CHRONICLES.meta.characters>45000);
 for(const s of w.TERRA.stories){
@@ -44,7 +44,7 @@ for(const s of w.TERRA.stories){
  assert.ok(doc.querySelectorAll('.regional-cast-card[href]').length>=4,'Missing linked cast '+s.id);
  for(const a of doc.querySelectorAll('.event-person[href],.regional-cast-card[href],.inline-person'))assert.ok(w.ROSTER_RENDER.index.has(a.hash.split('/')[2]),'Broken character link '+a.href);
  for(const a of doc.querySelectorAll('.region-mobile-toc [data-anchor],.reader-left [data-anchor]'))assert.ok(doc.getElementById(a.dataset.anchor),'Broken regional contents '+s.id);
- for(const p of s.chronicle.periods)assert.ok(p.refs.length&&p.refs.every(r=>r.label&&/^https:/.test(r.url)),'Missing phase evidence '+s.id);
+ for(const p of s.chronicle.periods)assert.ok(p.refs.length&&p.refs.every(r=>r.label&&(/^https:/.test(r.url)||w.JOURNEY_REFERENCE.chapters.some(c=>r.url==='#/sources/reference/'+c.id))),'Missing phase evidence '+s.id);
  for(const n of s.people){const p=w.ROSTER_RENDER.byName(n[0]);if(!p)continue;go('/character/'+p.id);assert.ok(doc.querySelector(`.regional-backlinks a[href="#/story/${s.id}"]`),'Missing reciprocal link '+s.id+' '+n[0]);}
 }
 go('/story/the-ship');click('[data-action="toggle-full"]');assert.equal(doc.querySelectorAll('.region-period,.region-mobile-toc,.reader-left a[href^="#part-"]').length,0);click('[data-action="enable-full"]');pass('23 detailed regional chronologies, stage citations, inline people and reciprocal event links');
@@ -89,12 +89,13 @@ pass('438 game-sourced operator dossiers, complete arts notes, unknown age handl
 
 assert.equal(w.REGIONAL_ORIGINS.meta.regions,22);assert.ok(w.REGIONAL_ORIGINS.meta.periods>=90);
 for(const story of w.TERRA.stories){go('/story/'+story.id);const history=w.ORIGIN_UI.periods(story);assert.ok(history.length>=3,'Missing early history '+story.id);assert.equal(doc.querySelectorAll('.origin-period').length,history.length);assert.equal(doc.querySelector('.book-intro').textContent,story.origins.intro);assert.equal(doc.querySelector('.chapter-section').id,w.ORIGIN_UI.anchor(history[0]));for(const p of history){const el=doc.getElementById(w.ORIGIN_UI.anchor(p));assert.ok(el&&el.querySelectorAll('p').length>=2,'History paragraphs '+story.id+' '+p.id);assert.ok(el.querySelectorAll('.biography-evidence a').length>=1);}assert.equal(doc.querySelectorAll('.regional-timeline>.region-period').length,w.ORIGIN_UI.visible(story).length);for(const a of doc.querySelectorAll('.region-mobile-toc [data-anchor],.reader-left [data-anchor]'))assert.ok(doc.getElementById(a.dataset.anchor),'Broken history contents '+story.id);}
-go('/story/nearl-light');const early=doc.querySelector('.regional-origins').textContent;assert.match(early,/神民统治/);assert.match(early,/骑士团制度/);assert.match(early,/一百二十年前/);assert.match(early,/拍卖/);assert.match(early,/商业联合会/);assert.ok(doc.querySelector('.regional-origins').compareDocumentPosition(doc.querySelector('.regional-timeline'))&w.Node.DOCUMENT_POSITION_FOLLOWING);
+go('/story/nearl-light');const early=doc.querySelector('.regional-origins').textContent;assert.match(early,/神民统治/);assert.match(early,/监正会/);assert.match(early,/一百二十年前/);assert.match(early,/拍卖/);assert.match(early,/商业联合会/);assert.ok(doc.querySelector('.regional-origins').compareDocumentPosition(doc.querySelector('.regional-timeline'))&w.Node.DOCUMENT_POSITION_FOLLOWING);
 go('/story/minos-heroes/part-1');await new Promise(r=>setTimeout(r,35));assert.ok(doc.querySelector('#history-supplements').open,'Legacy phase link expands historical supplement');
 go('/atlas/kazimierz');assert.ok(doc.querySelector('.region-origin-overview a[href*="history-"]'));input('#filter-query','扈从购堡');assert.equal(doc.querySelectorAll('.catalogue-row').length,1);
 go('/map/kazimierz');assert.match(doc.querySelector('.map-history-entry').hash,/history-pegasian-rule/);
 go('/story/nearl-light');click('[data-action="toggle-full"]');assert.equal(doc.querySelectorAll('.origin-period,.region-period,.reader-left [data-anchor^="history-"]').length,0);click('[data-action="enable-full"]');
 pass('22 sourced regional origin histories, foundations before modern episodes, precise chronology, searchable historical text, stable legacy links and spoiler gate');
 
+const {verifyJourney}=await import('./checks/verify-journey.mjs');pass(await verifyJourney({w,doc,go,click,input,assert}));
 assert.deepEqual(errors,[]);console.log(JSON.stringify({status:'passed',checks:checked,regions:w.TERRA.regions.length,stories:w.TERRA.stories.length,operators:w.OPERATORS.length,npcs:w.NPC_INDEX.length,support:w.SUPPORT_UNITS.length},null,2));
 dom.window.close();
