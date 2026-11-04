@@ -1,0 +1,67 @@
+{
+  "revision": "documentary-expanded-20261104",
+  "date": "2026-11-04",
+  "scope": {
+    "canonicalOperators": 400,
+    "majorNpcs": 65,
+    "regions": 22,
+    "regionalStories": 23,
+    "raceArticles": 32,
+    "personSupplements": 20
+  },
+  "expandedPeople": {
+    "operators": 400,
+    "npcs": 65,
+    "operatorPhases": 802,
+    "npcPhases": 139
+  },
+  "sections": {
+    "people": {
+      "stages": 1751,
+      "beforeCharacters": 221306,
+      "characters": 359344,
+      "addedCharacters": 138038,
+      "medianCharacters": 226,
+      "minCharacters": 23,
+      "maxCharacters": 415
+    },
+    "origins": {
+      "stages": 106,
+      "beforeCharacters": 45372,
+      "characters": 55051,
+      "addedCharacters": 9679,
+      "medianCharacters": 509,
+      "minCharacters": 331,
+      "maxCharacters": 782
+    },
+    "regions": {
+      "stages": 177,
+      "beforeCharacters": 67267,
+      "characters": 85351,
+      "addedCharacters": 18084,
+      "medianCharacters": 417,
+      "minCharacters": 234,
+      "maxCharacters": 1035
+    },
+    "races": {
+      "stages": 64,
+      "beforeCharacters": 10432,
+      "characters": 14258,
+      "addedCharacters": 3826,
+      "medianCharacters": 223,
+      "minCharacters": 131,
+      "maxCharacters": 311
+    },
+    "notes": {
+      "stages": 20,
+      "beforeCharacters": 5294,
+      "characters": 6744,
+      "addedCharacters": 1450,
+      "medianCharacters": 342,
+      "minCharacters": 294,
+      "maxCharacters": 366
+    }
+  },
+  "style": "按可考时序记述事实、行动与结果；叙事正文清理编者式转折，证据范围保留于出处和时序说明。",
+  "addedCharacters": 171077
+}

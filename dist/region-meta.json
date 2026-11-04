@@ -2,7 +2,7 @@
   "stories": 23,
   "regions": 22,
   "periods": 177,
-  "characters": 67267,
+  "characters": 85351,
   "primaryScenesCited": 192,
   "archiveLinksCited": 13,
   "date": "2026-11-04",
@@ -10,5 +10,6 @@
   "expandedPeriods": 29,
   "bodyFigures": 35,
   "charactersAdded": 16580,
-  "journeyModernPatches": 2
+  "journeyModernPatches": 2,
+  "revision": "documentary-expanded-20261104"
 }

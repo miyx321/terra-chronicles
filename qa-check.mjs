@@ -33,6 +33,9 @@ for(const p of [...w.OPERATORS,...w.NPC_INDEX]){
  for(const f of p.forms||[])if(!f.patch&&w.BIOGRAPHY_UI.get(f.id))assert.equal(w.BIOGRAPHY_UI.get(f.id).personId,b.personId,'Alternate identity '+p.name);
 }
 pass('400 canonical operator biographies and 65 NPC biographies have stages, relations, sources and working contents');
+assert.match(w.BIOGRAPHY_UI.sourceFor('《破碎日冕》10-17 · 行动后·坚城高墙',{id:'npc-misery'}).url,/level_main_10-15_end\.txt$/);
+assert.ok(w.BIOGRAPHY_UI.sourceFor('银灰·档案资料二',{id:'char_172_svrash'}).label.startsWith('银灰·'));
+pass('chapter references resolve quoted and unquoted source labels; archive references retain the matching operator form');
 go('/character/char_002_amiya');assert.ok(doc.querySelectorAll('.life-period').length>=8);assert.match(doc.querySelector('.life-timeline').textContent,/切尔诺伯格/);assert.match(doc.querySelector('.life-timeline').textContent,/相变临界/);assert.match(doc.querySelector('#life-0 .biography-evidence a').href,/act33side.*st03/);click('[data-action="toggle-full"]');assert.equal(doc.querySelectorAll('.life-period,.biography-toc,.biography-mobile-toc').length,0);assert.ok(!doc.querySelector('.record-layout.with-biography'));click('[data-roster-enable]');assert.ok(doc.querySelector('.life-period'));pass('long chronology, exact cited scene links and spoiler mode');
 go('/people');click('[data-roster-kind="operator"]');input('#filter-query','纳斯尔纱');assert.match(doc.querySelector('#people-results').textContent,/死芒/);pass('character search includes events inside expanded biographies');
 go('/sources');assert.match(doc.querySelector('main').textContent,/已取得用户提供的全文 TXT 转录/);assert.match(doc.querySelector('main').textContent,/438/);assert.ok(doc.querySelector('a[href="roster-meta.json"]'));pass('source transparency and snapshot provenance');

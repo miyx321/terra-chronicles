@@ -8,8 +8,8 @@
   "raceSections": 64,
   "regionalCharactersAdded": 16077,
   "modernCharactersAdded": 431,
-  "personNoteCharacters": 5294,
-  "raceCharacters": 10432,
+  "personNoteCharacters": 6744,
+  "raceCharacters": 14258,
   "source": {
     "kind": "用户提供的全文TXT转录",
     "filename": "TERRA+A+JOURNEY.txt",
@@ -19,6 +19,7 @@
     "limits": "存在OCR错字、跨栏串行及批注混排。章节与印刷页区间依据目录，非原版影印逐页校勘。原始TXT仅作本地研究材料。"
   },
   "chapterCount": 25,
+  "narrativeRevision": "documentary-expanded-20261104",
   "chapters": [
     {
       "id": "journey-kazimierz",

@@ -5,11 +5,12 @@
   "operatorEntries": 438,
   "primaryScenesIndexed": 1615,
   "memoryScenesRead": 399,
-  "paragraphs": 1766,
-  "relationships": 1429,
-  "characters": 325543,
-  "minimumCharacters": 293,
-  "maximumCharacters": 1898,
+  "paragraphs": 1751,
+  "relationships": 1399,
+  "characters": 460520,
+  "minimumCharacters": 535,
+  "maximumCharacters": 2180,
   "recordLinks": 515,
-  "coverage": "同一人物的常规与异格经历合并，明确区分时间未定、回忆、程序与分支；仅陈述所列来源支持的经历。"
+  "coverage": "同一人物的常规与异格经历合并，明确区分时间未定、回忆、程序与分支；仅陈述所列来源支持的经历。",
+  "revision": "documentary-expanded-20261104"
 }
